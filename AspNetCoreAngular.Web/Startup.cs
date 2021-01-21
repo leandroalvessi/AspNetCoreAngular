@@ -1,3 +1,4 @@
+using ApsNetCoreAngular.Swagger;
 using AspNetCoreAngular.Application.AutoMapper;
 using AspNetCoreAngular.Data.Context;
 using AspNetCoreAngular.IoC;
@@ -30,6 +31,7 @@ namespace AspNetCoreAngular.Web
             NativeInjector.RegisterServices(services);
 
             services.AddAutoMapper(typeof(AutoMapperSetup));
+            services.AddSwaggerConfiguration();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -51,6 +53,8 @@ namespace AspNetCoreAngular.Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseSwaggerConfiguration();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
