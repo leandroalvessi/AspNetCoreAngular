@@ -30,6 +30,9 @@ namespace AspNetCoreAngular.Application.Services
         }
         public bool Post(UserViewModel userViewModel)
         {
+            if (userViewModel.Id != Guid.Empty)
+                throw new Exception("UserID must be empty");
+
             User _user = mapper.Map<User>(userViewModel);
 
             this.userRepository.Create(_user);
@@ -39,7 +42,7 @@ namespace AspNetCoreAngular.Application.Services
         public UserViewModel GetById(string id)
         {
             if (!Guid.TryParse(id, out Guid userId))
-                throw new Exception("UserID is not found");
+                throw new Exception("UserID is not valid");
 
             User _user = this.userRepository.Find(x => x.Id == userId && !x.IsDeleted);
             if (_user == null)
@@ -50,6 +53,9 @@ namespace AspNetCoreAngular.Application.Services
 
         public bool Put(UserViewModel userViewModel)
         {
+            if (userViewModel.Id == Guid.Empty)
+                throw new Exception("ID is invalid");
+
             User _user = this.userRepository.Find(x => x.Id == userViewModel.Id && !x.IsDeleted);
             if (_user == null)
                 throw new Exception("User not found");
@@ -63,9 +69,10 @@ namespace AspNetCoreAngular.Application.Services
         public bool Delete (string id)
         {
             if (!Guid.TryParse(id, out Guid userId))
-                throw new Exception("UserID is not found");
+                throw new Exception("UserID is not valid");
 
             User _user = this.userRepository.Find(x => x.Id == userId && !x.IsDeleted);
+
             if (_user == null)
                 throw new Exception("User not found");
 
@@ -75,7 +82,11 @@ namespace AspNetCoreAngular.Application.Services
 
         public UserAuthenticateResponseViewModel Authenticate(UserAuthenticateRequestViewModel user)
         {
+            if (string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password))
+                throw new Exception("Email/Password are required.");
+
             User _user = this.userRepository.Find(x => !x.IsDeleted && x.Email.ToLower() == user.Email.ToLower());
+
             if (_user == null)
                 throw new Exception("User not found");
 

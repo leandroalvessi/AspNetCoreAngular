@@ -27,7 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreAngular.IoC", "As
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApsNetCoreAngular.Swagger", "ApsNetCoreAngular.Swagger\ApsNetCoreAngular.Swagger.csproj", "{80A8A7CD-E777-45AA-A6C7-5F071E0A6C6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreAngular.Auth", "AspNetCoreAngular.Auth\AspNetCoreAngular.Auth.csproj", "{4E60A27F-4618-41B1-87DC-5A8301DB6DCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreAngular.Auth", "AspNetCoreAngular.Auth\AspNetCoreAngular.Auth.csproj", "{4E60A27F-4618-41B1-87DC-5A8301DB6DCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Tests", "0-Tests", "{6761DED6-FDB7-4D98-8F9B-A0D7F20F69C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApsNetCoreAngular.Application.Tests", "ApsNetCoreAngular.Application.Tests\ApsNetCoreAngular.Application.Tests.csproj", "{3CDDBB88-4880-4588-A966-7D2CD7FB762A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,10 @@ Global
 		{4E60A27F-4618-41B1-87DC-5A8301DB6DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E60A27F-4618-41B1-87DC-5A8301DB6DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E60A27F-4618-41B1-87DC-5A8301DB6DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CDDBB88-4880-4588-A966-7D2CD7FB762A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CDDBB88-4880-4588-A966-7D2CD7FB762A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CDDBB88-4880-4588-A966-7D2CD7FB762A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CDDBB88-4880-4588-A966-7D2CD7FB762A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +85,7 @@ Global
 		{CA6C9564-8D88-4B69-A11A-27DA657B69C3} = {A1B49C42-702F-425E-874C-63237A0BF4D0}
 		{80A8A7CD-E777-45AA-A6C7-5F071E0A6C6B} = {A1B49C42-702F-425E-874C-63237A0BF4D0}
 		{4E60A27F-4618-41B1-87DC-5A8301DB6DCC} = {A1B49C42-702F-425E-874C-63237A0BF4D0}
+		{3CDDBB88-4880-4588-A966-7D2CD7FB762A} = {6761DED6-FDB7-4D98-8F9B-A0D7F20F69C5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E2A11D0-2650-4BA2-866D-1B464BB920C4}
