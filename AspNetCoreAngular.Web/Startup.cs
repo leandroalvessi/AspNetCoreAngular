@@ -1,4 +1,5 @@
 using AspNetCoreAngular.Data.Context;
+using AspNetCoreAngular.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +25,7 @@ namespace AspNetCoreAngular.Web
         {
             services.AddControllersWithViews();
             services.AddDbContext<AspNetCoreAngularContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("ApsNetCoreAngular")).EnableSensitiveDataLogging());
+            NativeInjector.RegisterServices(services);
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

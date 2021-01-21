@@ -11,17 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{A7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra", "4-Infra", "{5FDBA2CC-ABDF-48BF-A106-F9676364B881}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreAngular.Web", "AspNetCoreAngular.Web\AspNetCoreAngular.Web.csproj", "{1A12415E-7B49-4A17-898D-6D0C84D9AF07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreAngular.Web", "AspNetCoreAngular.Web\AspNetCoreAngular.Web.csproj", "{1A12415E-7B49-4A17-898D-6D0C84D9AF07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreAngular.Application", "AspNetCoreAngular.Application\AspNetCoreAngular.Application.csproj", "{DA7747A1-EBE1-4006-BF4C-4D066E5B5E90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreAngular.Application", "AspNetCoreAngular.Application\AspNetCoreAngular.Application.csproj", "{DA7747A1-EBE1-4006-BF4C-4D066E5B5E90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreAngular.Domain", "AspNetCoreAngular.Domain\AspNetCoreAngular.Domain.csproj", "{8CEB9FBF-0E91-4896-9734-DD7E6DCF1207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreAngular.Domain", "AspNetCoreAngular.Domain\AspNetCoreAngular.Domain.csproj", "{8CEB9FBF-0E91-4896-9734-DD7E6DCF1207}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1-Data", "4.1-Data", "{C2BDD4F6-A77D-4253-9915-704688384080}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreAngular.Data", "AspNetCoreAngular.Data\AspNetCoreAngular.Data.csproj", "{6944CFC0-BF8C-4480-A768-15C12839968B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreAngular.Data", "AspNetCoreAngular.Data\AspNetCoreAngular.Data.csproj", "{6944CFC0-BF8C-4480-A768-15C12839968B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-CrossCutting", "{A1B49C42-702F-425E-874C-63237A0BF4D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreAngular.IoC", "AspNetCoreAngular.IoC\AspNetCoreAngular.IoC.csproj", "{CA6C9564-8D88-4B69-A11A-27DA657B69C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6944CFC0-BF8C-4480-A768-15C12839968B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6944CFC0-BF8C-4480-A768-15C12839968B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6944CFC0-BF8C-4480-A768-15C12839968B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6C9564-8D88-4B69-A11A-27DA657B69C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6C9564-8D88-4B69-A11A-27DA657B69C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6C9564-8D88-4B69-A11A-27DA657B69C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6C9564-8D88-4B69-A11A-27DA657B69C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{C2BDD4F6-A77D-4253-9915-704688384080} = {5FDBA2CC-ABDF-48BF-A106-F9676364B881}
 		{6944CFC0-BF8C-4480-A768-15C12839968B} = {C2BDD4F6-A77D-4253-9915-704688384080}
 		{A1B49C42-702F-425E-874C-63237A0BF4D0} = {5FDBA2CC-ABDF-48BF-A106-F9676364B881}
+		{CA6C9564-8D88-4B69-A11A-27DA657B69C3} = {A1B49C42-702F-425E-874C-63237A0BF4D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1E2A11D0-2650-4BA2-866D-1B464BB920C4}
