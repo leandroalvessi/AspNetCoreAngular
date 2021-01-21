@@ -4,14 +4,16 @@ using AspNetCoreAngular.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AspNetCoreAngular.Data.Migrations
 {
     [DbContext(typeof(AspNetCoreAngularContext))]
-    partial class AspNetCoreAngularContextModelSnapshot : ModelSnapshot
+    [Migration("20201209182515_Common Fields")]
+    partial class CommonFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,7 +52,7 @@ namespace AspNetCoreAngular.Data.Migrations
                         new
                         {
                             Id = new Guid("d6de30c5-d2c1-40eb-a11c-d5a526f34862"),
-                            DateCreate = new DateTime(2020, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DateCreate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "userdefaul@AspNetCoreAngular.com",
                             IsDeleted = false,
                             Name = "User Default"

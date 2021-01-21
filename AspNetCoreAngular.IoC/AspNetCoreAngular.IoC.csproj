@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AspNetCoreAngular.Application\AspNetCoreAngular.Application.csproj" />
+    <ProjectReference Include="..\AspNetCoreAngular.Data\AspNetCoreAngular.Data.csproj" />
+    <ProjectReference Include="..\AspNetCoreAngular.Domain\AspNetCoreAngular.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AspNetCoreAngular.Application.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,6 @@ namespace AspNetCoreAngular.Application.Interfaces
 {
     public interface IUserService
     {
-        void Teste();
+        List<UserViewModel> Get();
     }
 }

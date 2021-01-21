@@ -22,8 +22,7 @@ namespace AspNetCoreAngular.Web.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            this.userService.Teste();
-            return Ok("Ok");
+            return Ok(this.userService.Get());
         }
     }
 }
