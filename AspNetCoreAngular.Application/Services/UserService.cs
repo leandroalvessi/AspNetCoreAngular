@@ -6,7 +6,9 @@ using AspNetCoreAngular.Domain.Interfaces;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
+using ValidationContext = System.ComponentModel.DataAnnotations.ValidationContext;
 
 namespace AspNetCoreAngular.Application.Services
 {
@@ -32,6 +34,8 @@ namespace AspNetCoreAngular.Application.Services
         {
             if (userViewModel.Id != Guid.Empty)
                 throw new Exception("UserID must be empty");
+
+            Validator.ValidateObject(userViewModel, new ValidationContext(userViewModel), true);
 
             User _user = mapper.Map<User>(userViewModel);
 
