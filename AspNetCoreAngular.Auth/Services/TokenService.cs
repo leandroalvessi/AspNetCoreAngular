@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Principal;
 using System.Text;
 
 namespace AspNetCoreAngular.Auth.Services
@@ -29,11 +30,11 @@ namespace AspNetCoreAngular.Auth.Services
             return tokenHandler.WriteToken(token);
         }
 
-        //public static string GetValueFromClaim(IIdentity identity, string field)
-        //{
-        //    var claims = identity as ClaimsIdentity;
+        public static string GetValueFromClaim(IIdentity identity, string field)
+        {
+            var claims = identity as ClaimsIdentity;
 
-        //    return claims.FindFirst(field).Value;
-        //}
+            return claims.FindFirst(field).Value;
+        }
     }
 }
