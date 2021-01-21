@@ -1,4 +1,5 @@
-﻿using AspNetCoreAngular.Data.Mappings;
+﻿using AspNetCoreAngular.Data.Extensions;
+using AspNetCoreAngular.Data.Mappings;
 using AspNetCoreAngular.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -19,6 +20,8 @@ namespace AspNetCoreAngular.Data.Context
         protected override void OnModelCreating(ModelBuilder modeBuilder)
         {
             modeBuilder.ApplyConfiguration(new UserMap());
+
+            modeBuilder.SeedData();
 
             base.OnModelCreating(modeBuilder);
         }    
