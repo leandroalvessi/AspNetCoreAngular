@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -15,6 +15,8 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.6" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.1">
@@ -38,6 +40,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ApsNetCoreAngular.Swagger\ApsNetCoreAngular.Swagger.csproj" />
     <ProjectReference Include="..\AspNetCoreAngular.Application\AspNetCoreAngular.Application.csproj" />
+    <ProjectReference Include="..\AspNetCoreAngular.Auth\AspNetCoreAngular.Auth.csproj" />
     <ProjectReference Include="..\AspNetCoreAngular.Data\AspNetCoreAngular.Data.csproj" />
     <ProjectReference Include="..\AspNetCoreAngular.IoC\AspNetCoreAngular.IoC.csproj" />
   </ItemGroup>
