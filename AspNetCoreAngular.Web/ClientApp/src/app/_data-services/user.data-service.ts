@@ -8,4 +8,7 @@ export class UserDataService {
   get() {
     return this.http.get(this.module);
   }
+  post(data) {
+    return this.http.post(this.module, data);
+  }
 }
