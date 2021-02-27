@@ -1,0 +1,10 @@
+git config --global user.name "Leandro Alves da Silva"
+git config --global user.email leandroalves.desenvolvedor@hotmail.com
+
+git checkout -b [nome do branch]
+git push origin [nome do branch]
+git push --set-upstream origin [nome do branch]
+git merge [nome do branch]
+git branch -D [nome do branch]
+git push origin --delete [nome do branch]
+git cherry-pick [id commit]

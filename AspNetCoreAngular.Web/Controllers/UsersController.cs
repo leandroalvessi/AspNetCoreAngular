@@ -43,7 +43,7 @@ namespace AspNetCoreAngular.Web.Controllers
             return Ok(this.userService.GetById(id));    
         }
 
-        [HttpPut]
+        [HttpPut, AllowAnonymous]
         public IActionResult Put(UserViewModel userViewModel)
         {
             return Ok(this.userService.Put(userViewModel));
