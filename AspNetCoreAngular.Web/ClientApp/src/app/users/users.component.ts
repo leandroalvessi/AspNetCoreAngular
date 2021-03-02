@@ -72,5 +72,20 @@ export class UsersComponent implements OnInit {
     })
   }
 
+  delete(user) {
+    this.userDataService.delete(user.id).subscribe(data => {
+      if (data) {
+        alert('Usuario excluirdo com sucesso');
+        this.get();
+        this.user = {};
+      } else {
+        alert('Erro ao excluir usuario');
+      }
+    }, error => {
+      console.log(error);
+      alert('erro interno do sistema');
+    })
+  }
+
 }
 
